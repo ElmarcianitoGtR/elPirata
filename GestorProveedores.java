@@ -1,5 +1,4 @@
-
-import java.util.*;
+import java.util.ArrayList;
 
 public class GestorProveedores {
     private ArrayList<Proveedor> proveedores;

@@ -1,6 +1,7 @@
-
+import java.util.ArrayList;
+import java.util.Date;
 import java.text.SimpleDateFormat;
-import java.util.*;
+
 public class Venta {
     private String numeroNota;
     private Date fecha;

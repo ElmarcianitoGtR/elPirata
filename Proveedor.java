@@ -1,5 +1,3 @@
-
-
 public class Proveedor {
     private String razonSocial;
     private String rfc;
@@ -35,10 +33,10 @@ public class Proveedor {
     @Override
     public String toString() {
         return "Proveedor: " + razonSocial + 
-                "\nRFC: " + rfc + 
-                "\nDirección: " + direccion + 
-                "\nTel: " + telefono + " - Fax: " + fax + 
-                "\nContacto: " + nombreContacto + 
-                "\nEmail: " + emailContacto + " - Tel: " + telefonoContacto;
+               "\nRFC: " + rfc + 
+               "\nDirección: " + direccion + 
+               "\nTel: " + telefono + " - Fax: " + fax + 
+               "\nContacto: " + nombreContacto + 
+               "\nEmail: " + emailContacto + " - Tel: " + telefonoContacto;
     }
 }

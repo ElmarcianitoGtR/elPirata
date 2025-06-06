@@ -10,7 +10,8 @@ public class Producto {
         this.precioUnitario = precioUnitario;
         this.existencia = existencia;
     }
-    
+
+    // Getters y Setters
     public String getCodigo() { return codigo; }
     public String getDescripcion() { return descripcion; }
     public double getPrecioUnitario() { return precioUnitario; }
@@ -20,6 +21,6 @@ public class Producto {
     @Override
     public String toString() {
         return "Producto #" + codigo + " - " + descripcion + 
-                "\nPrecio: $" + precioUnitario + " - Existencia: " + existencia;
+               "\nPrecio: $" + precioUnitario + " - Existencia: " + existencia;
     }
 }

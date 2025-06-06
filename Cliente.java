@@ -1,4 +1,3 @@
-
 public class Cliente {
     private String numeroCliente;
     private String rfc;
@@ -8,7 +7,7 @@ public class Cliente {
     private String telefono;
 
     public Cliente(String numeroCliente, String rfc, String razonSocial, 
-                    String direccionFiscal, String nombreContacto, String telefono) {
+                  String direccionFiscal, String nombreContacto, String telefono) {
         this.numeroCliente = numeroCliente;
         this.rfc = rfc;
         this.razonSocial = razonSocial;
@@ -28,8 +27,8 @@ public class Cliente {
     @Override
     public String toString() {
         return "Cliente #" + numeroCliente + " - " + razonSocial + 
-                "\nRFC: " + rfc + 
-                "\nDirección Fiscal: " + direccionFiscal + 
-                "\nContacto: " + nombreContacto + " - Tel: " + telefono;
+               "\nRFC: " + rfc + 
+               "\nDirección Fiscal: " + direccionFiscal + 
+               "\nContacto: " + nombreContacto + " - Tel: " + telefono;
     }
 }
