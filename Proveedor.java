@@ -1,5 +1,3 @@
-
-
 public class Proveedor {
     private String razonSocial;
     private String rfc;
@@ -22,7 +20,6 @@ public class Proveedor {
         this.telefonoContacto = telefonoContacto;
     }
 
-    // Getters
     public String getRazonSocial() { return razonSocial; }
     public String getRfc() { return rfc; }
     public String getDireccion() { return direccion; }
@@ -41,4 +38,5 @@ public class Proveedor {
                 "\nContacto: " + nombreContacto + 
                 "\nEmail: " + emailContacto + " - Tel: " + telefonoContacto;
     }
+    
 }

@@ -11,6 +11,7 @@ public class DetalleVenta {
         this.importe = cantidad * precioUnitario;
     }
 
+    // Getters
     public Producto getProducto() { return producto; }
     public int getCantidad() { return cantidad; }
     public double getPrecioUnitario() { return precioUnitario; }

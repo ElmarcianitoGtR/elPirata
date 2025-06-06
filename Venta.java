@@ -1,6 +1,5 @@
-
-import java.text.SimpleDateFormat;
 import java.util.*;
+import java.text.SimpleDateFormat;
 public class Venta {
     private String numeroNota;
     private Date fecha;

@@ -1,4 +1,3 @@
-
 import java.util.*;
 public class GestorVentas {
     private ArrayList<Venta> ventas;
