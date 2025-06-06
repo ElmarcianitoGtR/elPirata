@@ -20,7 +20,6 @@ public class Proveedor {
         this.telefonoContacto = telefonoContacto;
     }
 
-    // Getters
     public String getRazonSocial() { return razonSocial; }
     public String getRfc() { return rfc; }
     public String getDireccion() { return direccion; }
@@ -33,10 +32,11 @@ public class Proveedor {
     @Override
     public String toString() {
         return "Proveedor: " + razonSocial + 
-               "\nRFC: " + rfc + 
-               "\nDirección: " + direccion + 
-               "\nTel: " + telefono + " - Fax: " + fax + 
-               "\nContacto: " + nombreContacto + 
-               "\nEmail: " + emailContacto + " - Tel: " + telefonoContacto;
+                "\nRFC: " + rfc + 
+                "\nDirección: " + direccion + 
+                "\nTel: " + telefono + " - Fax: " + fax + 
+                "\nContacto: " + nombreContacto + 
+                "\nEmail: " + emailContacto + " - Tel: " + telefonoContacto;
     }
+    
 }
