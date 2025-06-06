@@ -1,4 +1,5 @@
 public class Proveedor {
+    //a se declara lo que vamos a ocupar
     private String razonSocial;
     private String rfc;
     private String direccion;
@@ -19,7 +20,7 @@ public class Proveedor {
         this.emailContacto = emailContacto;
         this.telefonoContacto = telefonoContacto;
     }
-
+    //Estos son los metodos que permiten obtener informacion de los proveedores
     public String getRazonSocial() { return razonSocial; }
     public String getRfc() { return rfc; }
     public String getDireccion() { return direccion; }
@@ -29,7 +30,7 @@ public class Proveedor {
     public String getEmailContacto() { return emailContacto; }
     public String getTelefonoContacto() { return telefonoContacto; }
 
-    @Override
+    @Override//se sobre escribe la funcion para poder brindar los datos en nuestro formato
     public String toString() {
         return "Proveedor: " + razonSocial + 
                 "\nRFC: " + rfc + 

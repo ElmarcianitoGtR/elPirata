@@ -1,4 +1,5 @@
 public class Cliente {
+        //Esta es la informacion que se registra de cada cliente
         private String numeroCliente;
         private String rfc;
         private String razonSocial;
@@ -16,7 +17,7 @@ public class Cliente {
             this.telefono = telefono;
         }
 
-        // Getters
+        // Estos son los metodos que nos permiten obtener los datos del cliente
         public String getNumeroCliente() { return numeroCliente; }
         public String getRfc() { return rfc; }
         public String getRazonSocial() { return razonSocial; }

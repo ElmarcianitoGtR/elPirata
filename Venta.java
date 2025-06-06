@@ -1,6 +1,9 @@
+//Importaciones
 import java.util.*;
 import java.text.SimpleDateFormat;
+
 public class Venta {
+    //Se declaran las cosas a ocupar
     private String numeroNota;
     private Date fecha;
     private Cliente cliente;
@@ -11,14 +14,15 @@ public class Venta {
 
     public Venta(String numeroNota, Cliente cliente) {
         this.numeroNota = numeroNota;
-        this.fecha = new Date();
+        this.fecha = new Date();//Generamos un dato con formato fecha
         this.cliente = cliente;
         this.detalles = new ArrayList<>();
+        //Se inicializan los datos arrastrables
         this.subtotal = 0;
         this.impuestos = 0;
         this.total = 0;
     }
-
+    //Se le añaden los detalles a la venta
     public void agregarDetalle(DetalleVenta detalle) {
         detalles.add(detalle);
         subtotal += detalle.getImporte();
@@ -26,7 +30,7 @@ public class Venta {
         total = subtotal + impuestos;
     }
 
-    // Getters
+    //Estos son los metodos que permiten interactiar con la venta y obtener informacion sobre ella
     public String getNumeroNota() { return numeroNota; }
     public Date getFecha() { return fecha; }
     public Cliente getCliente() { return cliente; }
@@ -35,7 +39,7 @@ public class Venta {
     public double getImpuestos() { return impuestos; }
     public double getTotal() { return total; }
 
-    public String generarNota() {
+    public String generarNota() {//Generamos la nota de venta
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         StringBuilder nota = new StringBuilder();
         

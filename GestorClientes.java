@@ -1,5 +1,5 @@
+//Importaciones
 import java.util.*;
-
 
 public class GestorClientes {
     private ArrayList<Cliente> clientes;
@@ -7,7 +7,7 @@ public class GestorClientes {
     public GestorClientes() {
         clientes = new ArrayList<>();
     }
-
+    //Son metodos para gestionar los clientes
     public void agregarCliente(Cliente cliente) {
         clientes.add(cliente);
     }

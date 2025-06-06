@@ -1,3 +1,4 @@
+//Importaciones
 import javax.swing.*;
 import java.awt.*;
 import java.util.*;
@@ -11,32 +12,32 @@ public class ClientesGUI {
         crearGUI();
     }
 
-    private void crearGUI() {
+    private void crearGUI() {//Se genera una ventanita de 600 x 400 px con borderlayout
         frame = new JFrame("Gestión de Clientes");
         frame.setSize(600, 400);
         
         JPanel panel = new JPanel(new BorderLayout());
-        
+        //se genera una botonera de una fila por cuatro columnas y 5px de espaciado, esto se genera junto con los botones
         JPanel buttonPanel = new JPanel(new GridLayout(1, 4, 5, 5));
         JButton btnAgregar = new JButton("Agregar");
         JButton btnBuscar = new JButton("Buscar");
         JButton btnListar = new JButton("Listar");
         JButton btnRegresar = new JButton("Regresar");
-        
+        //Se genera el textarea y el panel que lo contiene
         JTextArea textArea = new JTextArea();
         textArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(textArea);
-        
+        //Se les agrega una escucha para que ejecuten la funcion correspondiente
         btnAgregar.addActionListener(e -> agregarCliente(textArea));
         btnBuscar.addActionListener(e -> buscarCliente(textArea));
         btnListar.addActionListener(e -> listarClientes(textArea));
         btnRegresar.addActionListener(e -> frame.dispose());
-        
+        //Se añaden los botones al panel principal
         buttonPanel.add(btnAgregar);
         buttonPanel.add(btnBuscar);
         buttonPanel.add(btnListar);
         buttonPanel.add(btnRegresar);
-        
+        //Se añade todo al panel principal, se pinta la ventana y se hace visible
         panel.add(buttonPanel, BorderLayout.NORTH);
         panel.add(scrollPane, BorderLayout.CENTER);
         
@@ -44,7 +45,7 @@ public class ClientesGUI {
         frame.setVisible(true);
     }
 
-    private void agregarCliente(JTextArea textArea) {
+    private void agregarCliente(JTextArea textArea) {//se hace un panel de 6 filas 2 columnas que contiene el formulario para agregar cliente
         JPanel formPanel = new JPanel(new GridLayout(6, 2, 5, 5));
         
         JTextField txtNumero = new JTextField();
@@ -66,7 +67,7 @@ public class ClientesGUI {
         formPanel.add(txtContacto);
         formPanel.add(new JLabel("Teléfono:"));
         formPanel.add(txtTelefono);
-        
+        //Se hace una pequeña ventanita para la confirmacion
         int result = JOptionPane.showConfirmDialog(frame, formPanel, 
             "Nuevo Cliente", JOptionPane.OK_CANCEL_OPTION);
         
@@ -79,12 +80,12 @@ public class ClientesGUI {
                 txtContacto.getText(),
                 txtTelefono.getText()
             );
-            gestorClientes.agregarCliente(nuevo);
+            gestorClientes.agregarCliente(nuevo);//Se hace el registro y se notifica
             textArea.setText("Cliente agregado con éxito:\n" + nuevo);
         }
     }
 
-    private void buscarCliente(JTextArea textArea) {
+    private void buscarCliente(JTextArea textArea) {//se hace una mini ventanita que nos permite pedir un dato a partir del cual podemos buscar al cliente
         String numero = JOptionPane.showInputDialog(frame, 
             "Ingrese número de cliente:");
         if (numero != null && !numero.isEmpty()) {
@@ -97,7 +98,7 @@ public class ClientesGUI {
         }
     }
 
-    private void listarClientes(JTextArea textArea) {
+    private void listarClientes(JTextArea textArea) {//Verifica que tengamos clientes y los despliegue y los vacie en el text area
         ArrayList<Cliente> clientes = gestorClientes.getClientes();
         if (clientes.isEmpty()) {
             textArea.setText("No hay clientes registrados");
